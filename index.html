@@ -1,71 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="pageTitle">Job Details - devjobs</title>
-    <meta name="description" content="View detailed information about this developer position.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>devjobs - Find Your Perfect Developer Job</title>
+  <meta name="description" content="Browse the best developer jobs from top companies around the world. Find full-time, part-time, and remote positions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"> 
+  <link rel="shortcut icon" href="img/logo.jpeg" type="image/x-icon">
 </head>
-
 <body>
-    <!-- HEADER -->
-    <header class="header">
-        <div class="header-content">
-            <a href="index.html">
-                <h1 class="logo">devjobs</h1>
-            </a>
-            <div class="theme-toggle">
-                <svg class="theme-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-                </svg>
-                <div class="toggle-switch" id="themeToggle">
-                    <div class="toggle-slider"></div>
-                </div>
-                <svg class="theme-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                </svg>
-            </div>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-content">
+      <a href="index.html">
+        <h1 class="logo">devjobs</h1>
+      </a>
+      <div class="theme-toggle">
+        <svg class="theme-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+        <div class="toggle-switch" id="themeToggle">
+          <div class="toggle-slider"></div>
         </div>
-    </header>
+        <svg class="theme-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        </svg>
+      </div>
+    </div>
+  </header>
 
-    <!-- MAIN CONTENT -->
-    <main class="detail-container">
-        <a href="index.html" class="back-link">
-            <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-            </svg>
-            Back to jobs
-        </a>
+  <!-- MAIN CONTENT -->
+  <main class="container">
+    <!-- SEARCH BAR -->
+    <section class="search-bar">
+      <div class="search-input-wrapper">
+        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+        <input 
+          type="text" 
+          class="search-input" 
+          id="searchInput" 
+          placeholder="Filter by title, companies, expertise..."
+        >
+      </div>
 
-        <!-- COMPANY HEADER -->
-        <section class="company-header" id="companyHeader">
-            <!-- Company info will be dynamically inserted here -->
-        </section>
+      <div class="filter-wrapper">
+        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+        <input 
+          type="text" 
+          class="search-input" 
+          id="locationFilter" 
+          placeholder="Filter by location..."
+        >
+      </div>
 
-        <!-- JOB DETAIL CARD -->
-        <article class="job-detail-card" id="jobDetailCard">
-            <!-- Job details will be dynamically inserted here -->
-        </article>
-    </main>
-
-    <!-- FOOTER WITH APPLY BUTTON -->
-    <footer class="job-footer">
-        <div class="job-footer-content" id="jobFooter">
-            <!-- Footer content will be dynamically inserted here -->
+      <div class="checkbox-wrapper">
+        <div class="custom-checkbox" id="fullTimeCheckbox">
+          <svg style="display: none;" class="checkmark" width="15" height="12" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 6.5L5 10.5L13.5 1" stroke="#FFF" stroke-width="2" fill="none" fill-rule="evenodd"/>
+          </svg>
         </div>
-    </footer>
+        <label class="checkbox-label" for="fullTimeCheckbox">Full Time Only</label>
+      </div>
 
-    <script src="script.js"></script>
+      <button class="btn-search" id="searchBtn">Search</button>
+    </section>
+
+    <!-- JOBS GRID -->
+    <section class="jobs-grid" id="jobsGrid">
+      <!-- Job cards will be dynamically inserted here -->
+    </section>
+
+    <!-- LOAD MORE BUTTON -->
+    <div class="load-more-wrapper">
+      <button class="btn-load-more" id="loadMoreBtn">Load More</button>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
